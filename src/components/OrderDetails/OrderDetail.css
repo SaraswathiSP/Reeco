@@ -1,0 +1,181 @@
+.order__details {
+    padding: 10px 100px 10px 100px;
+    margin-top: 15px;
+}
+
+.cont__1 {
+    border: 3px solid #e4e4e7;
+    border-radius: 15px;
+    padding: 10px 30px 10px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.line {
+    border-right: 2px solid #e4e4e7;
+}
+
+.cont__2 {
+    border: 3px solid #e4e4e7;
+    margin-top: 30px;
+    border-radius: 15px;
+    padding: 35px 70px 35px 70px;
+    min-height: 90vh;
+
+
+}
+
+.search {
+    width: 450px;
+    border-top: 1px solid #a3a3a3;
+    border-bottom: 1px solid #a3a3a3;
+    height: 40px;
+    border-right: none;
+    border-left: 1px solid #a3a3a3;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 15px;
+
+}
+
+.search-icon {
+    height: 40px;
+    margin-top: 3px;
+    color: #a3a3a3;
+    border-top: 1px solid #a3a3a3;
+    border-bottom: 1px solid #a3a3a3;
+    border-left: none;
+    background-color: transparent;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-right: 1px solid #a3a3a3;
+    text-align: center;
+}
+
+.add-btn {
+    text-align: center;
+    border-radius: 20px;
+    color: #064e3b;
+    border: 2px solid #064e3b;
+    margin-right: 15px;
+    height: 42px;
+    width: 100px;
+    font-weight: bold;
+    background-color: transparent;
+    margin-right: 35px;
+    cursor: pointer;
+}
+
+.product-table{
+    margin-top: 40px;
+}
+
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead th,
+tbody td {
+   
+    padding: 10px;
+    text-align: left;
+    color:#a1a1aa;
+
+}
+
+thead th {
+    background-color: #f2f2f2;
+}
+
+
+tbody td img {
+    height: 25px;
+    width: 35px;
+    margin-right: 10px;
+}
+
+
+tbody td span {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+tbody td .actions {
+    display: flex;
+    align-items: center;
+}
+
+
+tbody td .actions h3 {
+    cursor: pointer;
+    
+}
+
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+
+.green {
+    background-color: #4CAF50;
+    
+    color: white;
+}
+
+.red {
+    background-color: #f44336;
+   
+    color: white;
+}
+
+.orange {
+    background-color: #ff9800;
+   
+    color: white;
+}
+
+
+
+
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 5px;
+    height: 150px;
+}
+
+.modal1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 5px;
+   
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
