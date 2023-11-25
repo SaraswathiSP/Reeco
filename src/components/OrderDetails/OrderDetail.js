@@ -10,7 +10,7 @@ import { TbMeat } from "react-icons/tb";
 
 
 const OrderDetail = () => {
-    const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
   const [showMissingModal, setShowMissingModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState(null);
@@ -22,15 +22,26 @@ const OrderDetail = () => {
     quantity: 0,
   });
 
+  const fetchData = async () => {
+    try {
+      const response = await fetch('/data.json'); // Update the path accordingly
+      const jsonData = await response.json();
+      setData(jsonData.products);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
   useEffect(() => {
-    // Fetch data from JSON file or API endpoint
-    fetch('/data.json') // Update the path accordingly
-      .then((response) => response.json())
-      .then((jsonData) => {
-        setData(jsonData.products);
-      })
-      .catch((error) => console.error('Error fetching data:', error));
+    fetchData();
   }, []);
+
+  useEffect(() => {
+    // Store data in localStorage whenever it changes
+    localStorage.setItem('orderData', JSON.stringify(data));
+  }, [data]);
+
+  
 
   const handleApproval = (id) => {
     // Update status to "approved"
@@ -157,6 +168,14 @@ const OrderDetail = () => {
     setShowEditModal(false);
   };
 
+  const calculateTotalProductsPrice = () => {
+    let total = 0;
+    data.forEach((product) => {
+      total += calculateTotalPrice(product.price.slice(1, product.price.length), product.quantity);
+    });
+    return total.toFixed(2); 
+  };
+
     return (
         <div className='order__details'>
             <div className='cont__1'>
@@ -172,7 +191,7 @@ const OrderDetail = () => {
                 <div className='line'></div>
                 <div className='detail'>
                     <h4>Total</h4>
-                    <h3>$ 15,028.3</h3>
+                    <h3>${calculateTotalProductsPrice()}</h3>
                 </div>
                 <div className='line'></div>
                 <div className='detail'>
@@ -338,7 +357,7 @@ const OrderDetail = () => {
          </div>
          <div  style={{display:"flex", alignItems:"center"}}>
          <p style={{marginRight:'110px'}}>Total</p> 
-         <span>${editProduct.price}</span>
+         <span>{editProduct.price}</span>
          </div>
           
             </div>
