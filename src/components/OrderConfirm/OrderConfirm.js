@@ -1,22 +1,21 @@
-import React from 'react'
-import './OrderConfirm.css'
+import {OrderContainer, H4, OrderInfo,H3, BackButton,ApproveButton } from './OrderConfirmStyled.js'
 
 const OrderConfirm = () => {
   return (
-    
-    <div className='order__container'>
-        <h4>Orders<span style={{textDecoration:"underline", marginLeft:20}}>    Order 32457ABC</span> </h4>
-       <div className='order-info'>
-        <h3 style={{fontSize:25}}>Order 32457ABC</h3>
+    <OrderContainer>
+      <H4>
+        Orders
+        <span style={{ textDecoration: 'underline', marginLeft: 20 }}> Order 32457ABC</span>
+      </H4>
+      <OrderInfo>
+        <H3 style={{ fontSize: 25 }}>Order 32457ABC</H3>
         <div>
-            <button className='back-btn'>Back</button>
-            <button className='approve-btn'>Approve order</button>
+          <BackButton>Back</BackButton>
+          <ApproveButton>Approve order</ApproveButton>
         </div>
-        </div>
-    </div>
-    
-    
-  )
-}
+      </OrderInfo>
+    </OrderContainer>
+  );
+};
 
-export default OrderConfirm
+export default OrderConfirm;
