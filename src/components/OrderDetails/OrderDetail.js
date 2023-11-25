@@ -320,7 +320,7 @@ const OrderDetail = () => {
             Price ($) </p>
             <input style={{border:"1px solid #a1a1aa",width:100,height:40}}
               type='text'
-              value={editProduct.price.slice(1)}
+              value={editProduct.price}
               onChange={(e) => setEditProduct({ ...editProduct, price: e.target.value })}
             />
             <p style={{marginLeft:15}}>/ 6 + 1LB</p>
@@ -338,7 +338,7 @@ const OrderDetail = () => {
          </div>
          <div  style={{display:"flex", alignItems:"center"}}>
          <p style={{marginRight:'110px'}}>Total</p> 
-         <span>${editProduct.price.slice(1,editProduct.price.length)}</span>
+         <span>${editProduct.price}</span>
          </div>
           
             </div>
