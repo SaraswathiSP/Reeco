@@ -36,6 +36,7 @@
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     padding: 15px;
+    
 
 }
 
@@ -179,3 +180,56 @@ tbody tr:hover {
     justify-content: flex-end;
     margin-top: 10px;
 }
+
+
+/* Add the following styles to your OrderDetail.css file */
+
+.modal2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 450px;
+  }
+  
+  .modal2 h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .modal2 input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #a1a1aa;
+    border-radius: 5px;
+  }
+  
+  .modal-buttons2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .modal-buttons2 button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-buttons2 button:first-child {
+    background-color: transparent;
+    color: #064e3b;
+  }
+  
+  .modal-buttons2 button:last-child {
+    background-color: #064e3b;
+    color: #fff;
+  }
+  
